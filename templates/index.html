@@ -3,340 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Workshop de HTML e CSS</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="login-container">
-        <h1>Cadastro para o Workshop</h1>
-        <form action="home.html" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required>
-
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required>
-
-            <button type="submit">Cadastrar</button>
-        </form>
-    </div>
-</body>
-</html>
-
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop de HTML e CSS - Página Inicial</title>
+    <title>Workshop - Página Principal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Workshop de HTML e CSS</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="agenda.html">Agenda</a></li>
-                    <li><a href="instrutores.html">Instrutores</a></li>
-                    <li><a href="inscricoes.html">Inscrições</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="overlay">
-            <div class="container">
-                <h2>Bem-vindo ao Workshop!</h2>
-                <p>Desenvolva suas habilidades em HTML e CSS com nosso treinamento intensivo.</p>
-                <a href="inscricoes.html" class="cta">Inscreva-se Agora</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre">
-        <div class="container">
-            <h2>Sobre o Workshop</h2>
-            <p>Este workshop é projetado para proporcionar um conhecimento profundo do HTML e CSS, usando técnicas modernas e práticas recomendadas. Ideal para quem deseja avançar na carreira de desenvolvimento web.</p>
-        </div>
-    </section>
-
-    <section id="agenda">
-        <div class="container">
-            <h2>Agenda</h2>
+        <h1>Workshop de Desenvolvimento Web</h1>
+        <nav>
             <ul>
-                <li><strong>Dia 1:</strong> Introdução ao HTML5 e CSS3</li>
-                <li><strong>Dia 2:</strong> Layouts Dinâmicos com Flexbox</li>
-                <li><strong>Dia 3:</strong> Design Avançado com CSS Grid</li>
-                <li><strong>Dia 4:</strong> Projeto Final e Avaliação</li>
+                <li><a href="#registration">Cadastro</a></li>
+                <li><a href="#instructors">Instrutores</a></li>
+                <li><a href="#schedule">Agenda</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
-        </div>
-    </section>
-
-    <section id="instrutores">
-        <div class="container">
-            <h2>Instrutores</h2>
-            <div class="instrutor">
-                <img src="instrutor1.jpg" alt="Instrutor 1">
-                <h3>Maria Silva</h3>
-                <p>Especialista em Front-end com uma abordagem inovadora e eficaz.</p>
-            </div>
-            <div class="instrutor">
-                <img src="instrutor2.jpg" alt="Instrutor 2">
-                <h3>João Santos</h3>
-                <p>Desenvolvedor experiente, apaixonado por técnicas modernas e práticas.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="inscricoes">
-        <div class="container">
-            <h2>Inscreva-se Agora</h2>
-            <p>Garanta sua vaga preenchendo o formulário abaixo:</p>
-            <form action="#" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Bem-vindo ao nosso Workshop!</h2>
+            <p>Participe do nosso workshop para aprender sobre desenvolvimento web e muito mais.</p>
+        </section>
+        <section id="registration" class="registration">
+            <h2>Cadastro</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone">
 
-                <button type="submit">Inscrever-se</button>
+                <button type="submit">Enviar</button>
             </form>
-        </div>
-    </section>
-
-    <section id="contato">
-        <div class="container">
+        </section>
+        <section id="instructors" class="instructors">
+            <h2>Instrutores</h2>
+            <div class="instructor">
+                <h3>Maria Silva</h3>
+                <p>Especialista em Front-end, com 10 anos de experiência no mercado.</p>
+            </div>
+            <div class="instructor">
+                <h3>João Pereira</h3>
+                <p>Especialista em Back-end e Arquitetura de Software, com 8 anos de experiência.</p>
+            </div>
+        </section>
+        <section id="schedule" class="schedule">
+            <h2>Agenda</h2>
+            <ul>
+                <li><strong>Data:</strong> 10 de Agosto de 2024 - Introdução ao HTML e CSS</li>
+                <li><strong>Data:</strong> 11 de Agosto de 2024 - JavaScript para Iniciantes</li>
+                <li><strong>Data:</strong> 12 de Agosto de 2024 - Projeto Prático e Encerramento</li>
+            </ul>
+        </section>
+        <section id="contact" class="contact">
             <h2>Contato</h2>
-            <p>Para dúvidas ou mais informações, entre em contato:</p>
-            <address>
-                <p>Email: contato@workshophtmlcss.com</p>
-                <p>Telefone: (11) 1234-5678</p>
-            </address>
-        </div>
-    </section>
-
+            <p>Email: <a href="mailto:contato@workshop.com">contato@workshop.com</a></p>
+        </section>
+    </main>
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Workshop de HTML e CSS. Todos os direitos reservados.</p>
-        </div>
+        <p>&copy; 2024 Workshop de Desenvolvimento Web. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
 
 <style>
-    /* styles.css */
-
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #fff;
-    background: #000;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
 header {
-    background: #000;
-    color: #e74c3c; /* Vermelho */
-    padding: 1rem 0;
-    border-bottom: 3px solid #e74c3c;
+    background-color: #FF6F61; /* Vermelho Pastel */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
 }
 
 header h1 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+    margin: 0;
+    font-size: 2.5em;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    display: inline;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: #e74c3c; /* Vermelho */
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f39c12; /* Laranja pastel */
-    border-bottom: 2px solid #f39c12;
+    text-decoration: underline;
 }
 
-.hero {
-    background: url('background.jpg') no-repeat center center/cover;
-    color: #fff;
-    padding: 5rem 0;
-    text-align: center;
-    position: relative;
-    height: 80vh;
-    overflow: hidden;
+main {
+    padding: 20px;
+    background-color: #FAF3E0; /* Tom de fundo suave */
 }
 
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero h2 {
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.cta {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: #f39c12; /* Laranja pastel */
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.cta:hover {
-    background: #e67e22; /* Laranja mais escuro */
-}
-
-section {
-    padding: 3rem 0;
+.intro, .registration, .instructors, .schedule, .contact {
+    margin-bottom: 20px;
 }
 
 h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #e74c3c; /* Vermelho */
+    color: #FF6F61; /* Vermelho Pastel */
 }
 
-ul {
-    list-style: none;
-}
-
-ul li {
-    margin-bottom: 0.5rem;
-}
-
-.instrutor {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    border: 2px solid #e74c3c;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-.instrutor img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-right: 1rem;
-    border: 2px solid #e74c3c;
-}
-
-.instrutor h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-form {
+.registration form {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-form label {
-    margin-bottom: 0.5rem;
+label {
+    margin: 10px 0 5px;
 }
 
-form input {
-    margin-bottom: 1rem;
-    padding: 0.75rem;
-    border: 2px solid #e74c3c;
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    color: #333;
 }
 
-form button {
-    padding: 0.75rem;
-    background: #e74c3c; /* Vermelho */
-    color: #fff;
+button {
+    background-color: #FFD700; /* Dourado */
+    color: white;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
+    font-size: 1em;
 }
 
-form button:hover {
-    background: #d43f3a; /* Vermelho mais escuro */
+button:hover {
+    background-color: #FFC107; /* Dourado mais escuro */
+}
+
+.instructors .instructor {
+    background-color: #FFF0F0; /* Fundo leve */
+    border: 1px solid #FF6F61; /* Vermelho Pastel */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.schedule ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.schedule li {
+    background-color: #FFE4E1; /* Rosa claro */
+    border: 1px solid #FF6F61; /* Vermelho Pastel */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1.2em;
 }
 
 footer {
-    background: #000;
-    color: #e74c3c; /* Vermelho */
-    padding: 1rem 0;
+    background-color: #FF6F61; /* Vermelho Pastel */
+    color: white;
     text-align: center;
-    border-top: 3px solid #e74c3c;
-}
-
-/* Imagens de fundo */
-.hero {
-    position: relative;
-}
-
-.hero::before {
-    content: url('lightning.png'); /* Imagem de raio */
+    padding: 10px 0;
     position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 100px;
-    height: auto;
-    z-index: 1;
-}
-
-.hero::after {
-    content: url('sneaker.png'); /* Imagem de tênis de corrida */
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-    width: 120px;
-    height: auto;
-    z-index: 1;
+    width: 100%;
+    bottom: 0;
 }
 
 </style>
