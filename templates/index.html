@@ -3,191 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop - Página Principal</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Workout - Página Inicial</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <header>
-        <h1>Workshop de Desenvolvimento Web</h1>
-        <nav>
-            <ul>
-                <li><a href="#registration">Cadastro</a></li>
-                <li><a href="#instructors">Instrutores</a></li>
-                <li><a href="#schedule">Agenda</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Workout</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="#instrutores">Instrutores</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section class="intro">
-            <h2>Bem-vindo ao nosso Workshop!</h2>
-            <p>Participe do nosso workshop para aprender sobre desenvolvimento web e muito mais.</p>
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Transforme Seu Corpo, Transforme Sua Vida</h2>
+                <p>Junte-se a nós para treinos personalizados que vão além das suas expectativas!</p>
+                <a href="cadastro.html" class="btn">Cadastre-se Agora</a>
+            </div>
         </section>
-        <section id="registration" class="registration">
-            <h2>Cadastro</h2>
-            <form>
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Telefone:</label>
-                <input type="tel" id="phone" name="phone">
-
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-        <section id="instructors" class="instructors">
+        <section id="instrutores" class="informacoes">
             <h2>Instrutores</h2>
-            <div class="instructor">
-                <h3>Maria Silva</h3>
-                <p>Especialista em Front-end, com 10 anos de experiência no mercado.</p>
-            </div>
-            <div class="instructor">
-                <h3>João Pereira</h3>
-                <p>Especialista em Back-end e Arquitetura de Software, com 8 anos de experiência.</p>
-            </div>
+            <p>Conheça nossa equipe de profissionais altamente qualificados, prontos para ajudar você a alcançar seus objetivos de fitness.</p>
         </section>
-        <section id="schedule" class="schedule">
+
+        <section id="agenda" class="informacoes">
             <h2>Agenda</h2>
-            <ul>
-                <li><strong>Data:</strong> 10 de Agosto de 2024 - Introdução ao HTML e CSS</li>
-                <li><strong>Data:</strong> 11 de Agosto de 2024 - JavaScript para Iniciantes</li>
-                <li><strong>Data:</strong> 12 de Agosto de 2024 - Projeto Prático e Encerramento</li>
-            </ul>
+            <p>Consulte a nossa agenda para ver os horários dos treinos e eventos especiais. Mantenha-se atualizado e não perca nenhuma aula!</p>
         </section>
-        <section id="contact" class="contact">
+
+        <section id="contato" class="informacoes">
             <h2>Contato</h2>
-            <p>Email: <a href="mailto:contato@workshop.com">contato@workshop.com</a></p>
+            <p>Tem alguma dúvida ou precisa de mais informações? Entre em contato conosco pelo e-mail: <a href="mailto:contato@workout.com">contato@workout.com</a>.</p>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Workshop de Desenvolvimento Web. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2024 Workout. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Workout</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Workout</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="#instrutores">Instrutores</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cadastro">
+            <h2>Cadastro</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Workout. Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
+    /* Reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     color: #333;
 }
 
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
 header {
-    background-color: #FF6F61; /* Vermelho Pastel */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    border-bottom: 2px solid #d4af37; /* Dourado */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    color: #d4af37; /* Dourado */
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: #d4af37; /* Dourado */
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.hero {
+    background-color: #fdd7d7; /* Vermelho Pastel */
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
 }
 
-main {
-    padding: 20px;
-    background-color: #FAF3E0; /* Tom de fundo suave */
+.hero-text {
+    color: #d4af37; /* Dourado */
 }
 
-.intro, .registration, .instructors, .schedule, .contact {
+.hero h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-h2 {
-    color: #FF6F61; /* Vermelho Pastel */
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
-.registration form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-label {
-    margin: 10px 0 5px;
-}
-
-input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+.btn {
+    background-color: #d4af37; /* Dourado */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
     border-radius: 5px;
 }
 
-button {
-    background-color: #FFD700; /* Dourado */
-    color: white;
+.informacoes {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fdd7d7; /* Vermelho Pastel */
+}
+
+footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #d4af37; /* Dourado */
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdd7d7; /* Vermelho Pastel */
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #d4af37; /* Dourado */
+    color: #fff;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
-}
-
-button:hover {
-    background-color: #FFC107; /* Dourado mais escuro */
-}
-
-.instructors .instructor {
-    background-color: #FFF0F0; /* Fundo leve */
-    border: 1px solid #FF6F61; /* Vermelho Pastel */
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 10px;
-}
-
-.schedule ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.schedule li {
-    background-color: #FFE4E1; /* Rosa claro */
-    border: 1px solid #FF6F61; /* Vermelho Pastel */
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.contact p {
-    font-size: 1.2em;
-}
-
-footer {
-    background-color: #FF6F61; /* Vermelho Pastel */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
 }
 
 </style>
