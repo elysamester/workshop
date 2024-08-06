@@ -3,62 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout - Página Inicial</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Workout</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
-                    <li><a href="#instrutores">Instrutores</a></li>
-                    <li><a href="#agenda">Agenda</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-text">
-                <h2>Transforme Seu Corpo, Transforme Sua Vida</h2>
-                <p>Junte-se a nós para treinos personalizados que vão além das suas expectativas!</p>
-                <a href="cadastro.html" class="btn">Cadastre-se Agora</a>
-            </div>
-        </section>
-
-        <section id="instrutores" class="informacoes">
-            <h2>Instrutores</h2>
-            <p>Conheça nossa equipe de profissionais altamente qualificados, prontos para ajudar você a alcançar seus objetivos de fitness.</p>
-        </section>
-
-        <section id="agenda" class="informacoes">
-            <h2>Agenda</h2>
-            <p>Consulte a nossa agenda para ver os horários dos treinos e eventos especiais. Mantenha-se atualizado e não perca nenhuma aula!</p>
-        </section>
-
-        <section id="contato" class="informacoes">
-            <h2>Contato</h2>
-            <p>Tem alguma dúvida ou precisa de mais informações? Entre em contato conosco pelo e-mail: <a href="mailto:contato@workout.com">contato@workout.com</a>.</p>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Workout. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Workout</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
@@ -68,11 +12,8 @@
             <h1>Workout</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
-                    <li><a href="#instrutores">Instrutores</a></li>
-                    <li><a href="#agenda">Agenda</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="index.html">Cadastro</a></li>
+                    <li><a href="informacoes.html">Informações</a></li>
                 </ul>
             </nav>
         </div>
@@ -95,12 +36,45 @@
             </form>
         </section>
     </main>
-
-    <footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações - Workout</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
         <div class="container">
-            <p>&copy; 2024 Workout. Todos os direitos reservados.</p>
+            <h1>Workout</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Cadastro</a></li>
+                    <li><a href="informacoes.html">Informações</a></li>
+                </ul>
+            </nav>
         </div>
-    </footer>
+    </header>
+
+    <main>
+        <section id="instrutores" class="informacoes">
+            <h2>Instrutores</h2>
+            <p>Conheça nossa equipe de instrutores especializados prontos para ajudar você a alcançar seus objetivos de fitness.</p>
+        </section>
+
+        <section id="agenda" class="informacoes">
+            <h2>Agenda</h2>
+            <p>Consulte nossa agenda para ver os horários dos treinos e eventos especiais. Mantenha-se atualizado e não perca nada!</p>
+        </section>
+
+        <section id="contato" class="informacoes">
+            <h2>Contato</h2>
+            <p>Para dúvidas ou mais informações, entre em contato pelo e-mail: <a href="mailto:contato@workout.com">contato@workout.com</a>.</p>
+        </section>
+    </main>
 </body>
 </html>
 
@@ -115,17 +89,25 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
+    margin-top: 60px; /* Espaço para o cabeçalho fixo */
 }
 
 header {
     background-color: #f5f5f5;
+    position: fixed;
+    top: 0;
+    width: 100%;
     padding: 10px 0;
     border-bottom: 2px solid #d4af37; /* Dourado */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+header .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -135,66 +117,38 @@ header h1 {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    gap: 20px;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #d4af37; /* Dourado */
+    font-weight: bold;
 }
 
-.hero {
+.cadastro {
     background-color: #fdd7d7; /* Vermelho Pastel */
-    text-align: center;
     padding: 50px 20px;
-    position: relative;
+    text-align: center;
+    margin-top: 60px; /* Espaço para o cabeçalho fixo */
 }
 
-.hero-text {
-    color: #d4af37; /* Dourado */
-}
-
-.hero h2 {
-    font-size: 2.5em;
+.cadastro h2 {
+    font-size: 2em;
     margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.btn {
-    background-color: #d4af37; /* Dourado */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.informacoes {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fdd7d7; /* Vermelho Pastel */
-}
-
-footer {
-    background-color: #f5f5f5;
-    text-align: center;
-    padding: 10px 0;
-    border-top: 2px solid #d4af37; /* Dourado */
 }
 
 form {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fdd7d7; /* Vermelho Pastel */
+    background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form label {
@@ -217,6 +171,32 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.informacoes {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fdd7d7; /* Vermelho Pastel */
+}
+
+.informacoes h2 {
+    margin-bottom: 20px;
+}
+
+.informacoes p {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #d4af37; /* Dourado */
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
 }
 
 </style>
